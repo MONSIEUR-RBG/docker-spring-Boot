@@ -1,0 +1,43 @@
+# --- Dossiers de Build (Très lourds et inutiles) ---
+target/
+build/
+out/
+
+# --- Outils de Build locaux (Maven / Gradle) ---
+.mvn/
+mvnw
+mvnw.cmd
+.gradle/
+gradlew
+gradlew.cmd
+gradle/
+
+# --- Fichiers de configuration des IDEs ---
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+
+# VS Code
+.vscode/
+
+# Eclipse
+.settings/
+.classpath
+.project
+
+# --- Logs et fichiers temporaires ---
+*.log
+.logs/
+tmp/
+
+# --- Fichiers OS et divers ---
+.DS_Store
+Thumbs.db
+
+# --- Docker & Git ---
+.git
+.gitignore
+Dockerfile
+docker-compose.yml
+.dockerignore
