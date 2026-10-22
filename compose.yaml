@@ -10,7 +10,7 @@ services:
       - spring-postgres
     environment:
       - POSTGRES_DB=students_db
-      - POSTGRES_PASSWORD_FILE=jeSuisCharlie@
+      - POSTGRES_PASSWORD=jeSuisCharlie@
       - POSTGRES_USER=abel
     ports:
       - '5432:5432'
