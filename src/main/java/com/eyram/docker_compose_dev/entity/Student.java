@@ -20,7 +20,7 @@ public class Student {
     private int id;
     private String name;
     private int age;
-@ManyToMany(mappedBy = "student", fetch = FetchType.LAZY)
+@ManyToMany(mappedBy = "students", fetch = FetchType.LAZY)
     private Set<Course> courses= new HashSet<>();
 
 }

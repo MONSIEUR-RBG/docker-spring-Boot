@@ -22,8 +22,8 @@ public class Course {
 
     @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)
     //Here we put the joinTable
-    @JoinTable(name = "student_courses",
-    joinColumns = @JoinColumn(name = "courses_id"),
+    @JoinTable(name = "student_course",
+    joinColumns = @JoinColumn(name = "course_id"),
     inverseJoinColumns = @JoinColumn(name = "student_id")
     )
     private Set<Student> students= new HashSet<>();
