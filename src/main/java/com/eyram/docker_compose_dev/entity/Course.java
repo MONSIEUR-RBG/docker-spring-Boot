@@ -12,6 +12,7 @@ import java.util.Set;
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 @Table(name = "courses")
 public class Course {
     @Id
@@ -27,6 +28,13 @@ public class Course {
     inverseJoinColumns = @JoinColumn(name = "student_id")
     )
     private Set<Student> students= new HashSet<>();
-
-
+//helpers methods
+    public void addStudent(Student student){
+        student.getCourses().add(this);
+        students.add(student);
+    }
+public void removeStudent(Student student){
+        students.remove(student);
+        student.getCourses().remove(this);
+}
 }

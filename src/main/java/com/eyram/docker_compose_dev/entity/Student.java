@@ -14,6 +14,7 @@ import java.util.Set;
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class Student {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
@@ -22,5 +23,14 @@ public class Student {
     private int age;
 @ManyToMany(mappedBy = "students", fetch = FetchType.LAZY)
     private Set<Course> courses= new HashSet<>();
+ //Helper methods
+    public void addCourse(Course course){
+        courses.add(course);
+        course.getStudents().add(this);
 
+    }
+    public void removeCourse(Course course){
+        courses.remove(course);
+        course.getStudents().remove(this);
+    }
 }
